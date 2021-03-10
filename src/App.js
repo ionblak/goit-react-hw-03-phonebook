@@ -27,7 +27,7 @@ function App() {
     setContacts(prevState => [contact, ...prevState]);
   };
 
-  const DeleteContact = id => {
+  const deleteContact = id => {
     setContacts(prevState => prevState.filter(contact => contact.id !== id));
   };
 
@@ -60,7 +60,7 @@ function App() {
       <Filter value={filter} onHandleChange={handleChange} />
       <ContactList
         filteredContacts={getfilteredContacts()}
-        onDeleteContact={DeleteContact}
+        onDeleteContact={deleteContact}
       />
     </Container>
   );
